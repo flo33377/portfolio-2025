@@ -20,7 +20,6 @@ div {
 
 a {
   text-decoration: none;
-  color: black;
   cursor: pointer;
 }
 
@@ -32,20 +31,39 @@ body {
   color: white;
 }
 
-/* A suppr */
-body img {
-    height: 20px;
+#content {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* ne plus suppr */
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bold {
+    font-weight: bolder;
+}
 
 /* HEADER */
 
 header {
     width: 100%;
-    padding: 10px;
+    padding: 20px 15px 0 15px;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 15vh;
 }
 
 #header_container {
@@ -55,22 +73,21 @@ header {
     align-items: center;
 }
 
-#social_icons {
+#name {
     position: absolute;
     left: 50%; /* coin gauche à 50% du parent */
     transform: translateX(-50%); /* redécale à 50% de sa propre largeur pour le centrer sur l'écran */
+}
+
+#social_icons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
 #header_container img {
     height: 30px;
     aspect-ratio: auto;
     filter: invert(1);
-}
-
-header p {
-    font-size: 1.2em;
 }
 
 /* TOP PART */
@@ -82,8 +99,8 @@ header p {
 .cta {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 20px;
-    align-items: center;
     margin: 20px;
 }
 
@@ -92,9 +109,262 @@ header p {
     color: white;
     text-transform: uppercase;
     text-align: center;
+
     border: 2px solid white;
     border-radius: 10px;
-    min-height: fit-content;
     padding: 10px;
+
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    max-width: 40vw;
+    max-width: 200px;
 }
+
+#download_cv_button, #contact_button { /* Mise en forme main CTA */
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+}
+
+/* ABOUT ME PART */
+
+#about_me_part {
+    text-align: center;
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* case desktop */
+@media screen and (min-width: 767px) {
+    #about_me_part {
+        gap: 70px;
+    }
+    #aboutme_title {
+        margin-top: -170px;
+    }
+}
+
+#aboutme_title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#aboutme_title h3 {
+    margin-left: -35px;
+    margin-bottom: 15px;
+}
+
+#aboutme_text {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about_me_part p {
+    margin-top: 10px;
+}
+
+#about_me_part img {
+    height: 160px;
+    border-radius: 10px 20px 10px 75px;
+}
+
+/* SKILLS */
+
+#skills_projects_content {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 0;
+}
+
+/* case desktop */
+@media screen and (min-width: 767px) {
+    #skills_projects_content {
+        gap: 70px;
+    }
+}
+
+#accordeon_full_bloc {
+    display: flex;
+    flex-direction: column;
+}
+
+#accordeon_radio_bloc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    border: 2px solid white;
+    width: 80vw;
+    max-width: 300px;
+    border-radius: 10px 10px 0 0;
+}
+
+#accordeon_radio_bloc input[type="radio"] {
+    display: none;
+}
+
+#accordeon_radio_bloc img {
+    filter: invert(1);
+    height: 45px;
+    aspect-ratio: auto;
+}
+
+#accordeon_radio_bloc label {
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin: -1px;
+    transition: background-color 0.5s ease, filter 0.5s ease;
+}
+
+#accordeon_radio_bloc input[type="radio"]:checked + label {
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+#accordeon_radio_bloc input[type="radio"]:checked + label img {
+    filter: invert(0);
+}
+
+#skills_dynamic_display {
+    background-color: white;
+    width: 80vw;
+    max-width: 300px;
+    height: 50px;
+    margin-top: -1px;
+    border-radius: 0 0 10px 10px;
+
+    margin-bottom: 30px;
+}
+
+/* Partie contact */
+
+#contact_part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#cta_contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+}
+
+#cta_contact div {
+    height: 125px;
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+    border-radius: 10px;
+}
+
+#cta_contact a {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+#cta_contact img {
+    height: 40px;
+    aspect-ratio: auto;
+    filter: invert(1);
+}
+
+.contact_card {
+    background-color: black;
+    border: 2px solid white;
+    transition: transform 0.3s;
+    animation: pulseCard 6s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.contact_card a {
+    color: white;
+}
+
+.contact_card:nth-child(2) { /* uniquement pour le second bloc */
+    animation-delay: 3s;
+}
+  
+@keyframes pulseCard {
+    0% {
+      transform: scale(1);
+      filter: invert(0);
+    }
+    25% {
+      transform: scale(1.1);
+      filter: invert(1);
+    }
+    50% {
+      transform: scale(1);
+      filter: invert(0);
+    }
+    100% {
+      transform: scale(1);
+      filter: invert(0);
+    }
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 80px;
+    margin-bottom: 75px;
+    text-align: center;
+}
+
+/* NAV BAR */
+
+nav {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+    position: fixed;
+    bottom: 15px;
+
+    width: 80vw;
+    max-width: 280px;
+    padding: 5px;
+
+    border-radius: 20px;
+}
+
+nav img {
+    height: 40px;
+    aspect-ratio: auto;
+}
+
+#nav_arrow {
+    transform: rotate(90deg);
+}
+
+
 
