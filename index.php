@@ -44,8 +44,8 @@
     </div>
 
     <div class="cta">
-      <a href="" id="download_cv_button">Télécharger mon CV</a>
-      <a href="" id="go_github_button">Voir les coulisses de ce site</a>
+      <a href="https://fneto-prod.fr/portfolio/document/CV-FlorianNeto.pdf" download id="download_cv_button">Télécharger mon CV</a>
+      <a href="https://github.com/flo33377/portfolio-2025" id="go_github_button">Voir les coulisses de ce site</a>
     </div>
 
     <!-- Partie à propos de moi -->
@@ -66,7 +66,7 @@
         <p>Au travers d'une alternance 3 semaines entreprise, 1 semaine école, je peux enrichir vos équipes par <span class="bold">ma motivation, ma créativité et mon savoir-faire</span> grandissant.</p>
 
         <div class="cta">
-          <a href="mailto:florianneto95@gmail.com" id="contact_button">Contactez-moi !</a>
+          <a href="#" id="contact_button" class="contact_button">Contactez-moi !</a>
         </div>
 
       </div>
@@ -122,14 +122,14 @@
 
       <div id="cta_contact">
         <div class="contact_card">
-          <a href="">
+          <a href="https://wa.me/06.89.63.32.77"> <!-- check que fonctionnel, si non essayer sans les points ou avec extension territoire -->
             <img src="https://fneto-prod.fr/portfolio/img/phone_icon.png" alt="Icône téléphone">
             <p>Sur Whats'App</p>
           </a>
         </div>
 
         <div class="contact_card">
-          <a href="">
+          <a href="#" class="contact_button">
             <img src="https://fneto-prod.fr/portfolio/img/email_icon.png" alt="Icône email">
             <p>Par email</p>
           </a>
@@ -147,23 +147,27 @@
   <!-- Nav bar -->
   <nav>
 
-      <a href="">
+      <a href="/#about_me_part">
         <img src="https://fneto-prod.fr/portfolio/img/profile_icon.jpg" alt="Navigation - Qui suis-je ?">
       </a>
 
-      <a href="">
+      <a href="/#my_projects_part">
         <img src="https://fneto-prod.fr/portfolio/img/project_icon.jpg" alt="Navigation - Projets personnels">
       </a>
 
-      <a href="">
+      <a href="/#contact_part">
         <img src="https://fneto-prod.fr/portfolio/img/contact_icon.png" alt="Navigation - Me contacter">
       </a>
 
-      <a href="">
+      <a href="/#header_container">
         <img src="https://fneto-prod.fr/portfolio/img/arrow_icon.jpg" alt="Navigation - Revenir en haut" id="nav_arrow">
       </a>
 
   </nav>
+
+<!-- banner fallback en cas d'indispo mailto -->
+<div id="toast" class="toast"></div>
+
 
 </body>
 

@@ -1,0 +1,114 @@
+{
+    "skills": [
+        {
+        "nom": "HTML5",
+        "niveau": "Professionnel",
+        "categorie": "Dev"
+        },
+
+        {
+        "nom": "CSS3",
+        "niveau": "Professionnel",
+        "categorie": "Dev"
+        },
+
+        {
+        "nom": "JavaScript",
+        "niveau": "Intermédiaire",
+        "categorie": "Dev"
+        },
+
+        {
+        "nom": "PHP",
+        "niveau": "Intermédiaire",
+        "categorie": "Dev"
+        },
+
+        {
+        "nom": "SQL",
+        "niveau": "Intermédiaire",
+        "categorie": "Dev"
+        },
+        
+        {
+        "nom": "Trello, Asana",
+        "niveau": "Intermédiaire",
+        "categorie": "Outil"
+        },
+        
+        {
+        "nom": "Git, GitHub",
+        "niveau": "Intermédiaire",
+        "categorie": "Outil"
+        },
+        
+        {
+        "nom": "Figma",
+        "niveau": "Notions",
+        "categorie": "Outil"
+        },
+        
+        {
+        "nom": "Postman",
+        "niveau": "Notions",
+        "categorie": "Outil"
+        },
+        
+        {
+        "nom": "Anglais",
+        "niveau": "Professionnel",
+        "categorie": "Langue"
+        },
+        
+        {
+        "nom": "Espagnol",
+        "niveau": "Notions",
+        "categorie": "Langue"
+        }
+    ],
+
+    "experiences": [
+        {
+            "date": "mars 2022 - mars 2025",
+            "entreprise": "Keemia",
+            "poste": "Chef de projet web",
+            "missions": "Réalisation de LP et minisites pour appui de campagnes de promotion (30-40 projets/an), au travers de parcours gamifiés (écoute de besoin, cahier des charges, suivi rétroplanning, coordination graphisme-dev-prestataires, recette, reporting)."
+        },
+
+        {
+            "date": "décembre 2020 - mars 2022",
+            "entreprise": "BforBiz",
+            "poste": "Chef de projet web",
+            "missions": "Réalisation de sites internet vitrines et e-commerce optimisés SEO pour artisans locaux et TPE/PME, (WordPress, DUDA ou sans CMS)."
+        },
+
+        {
+            "date": "juillet - décembre 2019",
+            "entreprise": "Ipsos",
+            "poste": "Chargé d'études",
+            "missions": "Dans le service études quantitatives, réalisation d'études d'opinion pour des marques de différents secteurs."
+        },
+
+        {
+            "date": "novembre 2017 - octobre 2018",
+            "entreprise": "Alchimie",
+            "poste": "Assistant Product Owner",
+            "missions": "Soutien du Product Owner d'un service de jeux mobiles par abonnement (rituels agiles, User Stories, refonte graphique)."
+        }
+    ],
+
+    "education": [
+        {
+            "date": "2015 - 2018",
+            "diplome": "Master Grandes Ecoles - Majeure en management stratégique",
+            "ecole": "Institut Mines Télecom Business School - Evry"
+        },
+
+        {
+            "date": "2013 - 2015",
+            "diplome": "DUT Techniques de commercialisation",
+            "ecole": "IUT de Marne-la-Vallée, Antenne de Meaux"
+        }
+    ]
+
+}

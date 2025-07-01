@@ -12,6 +12,7 @@ html {
   padding: 0vh 0vh 0vh 0vh;
   background-color: white;
   font-family: "Arial", "Helvetica", sans-serif;
+  scroll-behavior: smooth; /* scroll smooth en natif navigateur */
 }
 
 div {
@@ -184,14 +185,15 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     gap: 0;
 }
 
 /* case desktop */
 @media screen and (min-width: 767px) {
     #skills_projects_content {
-        gap: 70px;
+        gap: 30px;
+        justify-content: space-between;
     }
 }
 
@@ -204,15 +206,18 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 10px;
     border: 2px solid white;
     width: 80vw;
-    max-width: 300px;
+    max-width: 400px;
     border-radius: 10px 10px 0 0;
 }
 
 #accordeon_radio_bloc input[type="radio"] {
     display: none;
+}
+
+#accordeon_radio_bloc .accordeon_icon {
+    width: 33%;
 }
 
 #accordeon_radio_bloc img {
@@ -226,7 +231,7 @@ header {
     border-radius: 10px 10px 0 0;
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     margin: -1px;
     transition: background-color 0.5s ease, filter 0.5s ease;
 }
@@ -242,13 +247,46 @@ header {
 
 #skills_dynamic_display {
     background-color: white;
+    color: black;
     width: 80vw;
-    max-width: 300px;
-    height: 50px;
+    max-width: 400px;
+    height: fit-content;
     margin-top: -1px;
     border-radius: 0 0 10px 10px;
 
+    padding: 15px;
+
     margin-bottom: 30px;
+}
+
+#skills_dynamic_display h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card, .experiences_card, .education_card {
+    border-bottom: 1px solid rgba(0,0,0,0.3);;
+    padding: 5px 0;
+}
+
+.dev_card .card, .tools_card .card, .languages_card .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.experiences_card p {
+    padding: 10px 0;
+    text-align: justify;
+}
+
+.education_card p {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.experiences_card p:first-of-type {
+    text-align: center;
 }
 
 /* Partie contact */
@@ -367,4 +405,28 @@ nav img {
 }
 
 
+/* Banner fallback */
+
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background-color: green;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 9999;
+    pointer-events: none;
+    font-family: sans-serif;
+  }
+  
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  
 
