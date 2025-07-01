@@ -1,0 +1,30 @@
+[
+    {
+      "nom": "Portfolio",
+      "url_logo": "https://fneto-prod.fr/portfolio/img/photo.png",
+      "date": "Juillet 2025 (terminé)",
+      "url_online": "https://fneto-prod.fr/portfolio/",
+      "url_github": "https://github.com/flo33377/portfolio-2025",
+      "description": "Portfolio créé dans le cadre de ma recherche d'alternance pour la formation Le Réacteur.",
+      "langages": "HTML, CSS, JS"
+    },
+    {
+      "nom": "TimeCapsule",
+      "url_logo": "https://fneto-prod.fr/timecapsule/img/timecapsule-logo.png",
+      "date": "Mars 2025 à aujourd'hui (en cours)",
+      "url_online": "https://fneto-prod.fr/timecapsule/",
+      "url_github": "https://github.com/flo33377/TimeCapsule",
+      "description": "Plateforme SaaS permettant de créer des LP customisables pour des évènements (anniversaire, EVJF, etc.) à diffuser aux invités pour qu'ils téléchargent leurs photos souvenirs et les customisent. Créé un feed commun likeable permettant de centraliser les souvenirs.",
+      "langages": "HTML, CSS, JS, PHP, SQL, BDD SQLite"
+    },
+    {
+      "nom": "AmbitionHub",
+      "url_logo": "https://fneto-prod.fr/ambition-hub/img/logo_white.png",
+      "date": "Février 2025 (en pause)",
+      "url_online": null,
+      "url_github": null,
+      "description": "Plateforme SaaS pour se créer des to do thématiques hebdomadaires ou mensuelles et suivre leur réalisation.",
+      "langages": "HTML, CSS, JS, PHP, SQL, BDD MySQL"
+    }
+  ]
+  

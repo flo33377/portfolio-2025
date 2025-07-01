@@ -13,9 +13,9 @@
 
   <script src="./public/js/js-functions.js" defer></script>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="https://fneto-prod.fr/timecapsule/img/favicon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://fneto-prod.fr/timecapsule/img/favicon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://fneto-prod.fr/timecapsule/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://fneto-prod.fr/portfolio/img/photo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://fneto-prod.fr/portfolio/img/photo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://fneto-prod.fr/portfolio/img/photo.png">
 
   <title>Florian Neto - Portfolio</title>
 </head>
@@ -78,6 +78,7 @@
 
       <!-- Accordéon des compétences et expériences -->
       <div id="accordeon_full_bloc">
+      <h3 class="title_category">Compétences et expériences</h3>
         <div id="accordeon_radio_bloc">
 
           <div class="accordeon_icon">
@@ -105,7 +106,7 @@
 
       <!-- Projets personnels -->
       <div id="my_projects_part">
-        <h3>Projets personnels</h3>
+        <h3 class="title_category">Projets personnels</h3>
 
         <div id="projects_content"></div>
       

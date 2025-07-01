@@ -50,7 +50,7 @@ if(contactButton) {
 // Fonctionnalité : Fonction qui affiche les compétences
 
 /* get le contenu du json */
-fetch('/public/js/skills.json')
+fetch('/public/js/json/skills.json')
   .then(response => response.json())
   .then(data => {
     accordeonContent = data;
@@ -183,6 +183,64 @@ function getAccordeonNewContent(radioAccordeon) {
         }
     }
 
+}
+
+
+// Fonctionnalité : Fonction qui affiche les projets
+
+/* get le contenu du json */
+fetch('/public/js/json/projects.json')
+  .then(response => response.json())
+  .then(data => {
+    projectsContent = data;
+    getProjectsContent();
+})
+
+projetsContainer = document.getElementById('projects_content');
+
+/* clean le content et injecte le nouveau séleectionné */
+function getProjectsContent() {
+    container = document.createElement('div');
+    projectsContent.forEach(project => {
+        const div = document.createElement('div');
+        div.className = "project_card";
+        if(project.url_online != null) {
+            div.innerHTML = `
+                    <div>
+                        <img src='${project.url_logo}' alt="logo project ${project.nom}">
+                    </div>
+                    <div class="project_top">
+                        <h3>${project.nom}</h3>
+                        <div class="project_icon">
+                            <a href="${project.url_online}"><img src="https://fneto-prod.fr/portfolio/img/external-link-icon.png"></a>
+                            <a href="${project.url_github}"><img src="https://fneto-prod.fr/portfolio/img/github_icon.png"></a>
+                        </div>
+                    </div>
+                <p>${project.description}</p>
+                <div class="project_bottom">
+                    <p>${project.date}</p>
+                    <p>${project.langages}</p>
+                </div>
+                `;
+        } else {
+            div.innerHTML = `
+                <div>
+                    <img src='${project.url_logo}' alt="logo project ${project.nom}">
+                </div>
+                <div class="project_top">
+                    <h3>${project.nom}</h3>
+                    <div></div>
+                </div>
+            <p>${project.description}</p>
+            <div class="project_bottom">
+                <p>${project.date}</p>
+                <p>${project.langages}</p>
+            </div>
+            `;
+        }
+        container.appendChild(div);
+    })
+    projetsContainer.appendChild(container);
 }
 
 
