@@ -10,7 +10,6 @@
 html {
   height: 100%;
   padding: 0vh 0vh 0vh 0vh;
-  background-color: white;
   font-family: "Arial", "Helvetica", sans-serif;
   scroll-behavior: smooth; /* scroll smooth en natif navigateur */
 }
@@ -28,9 +27,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
-  color: white;
+  background-color: #004743;
+  color: #F0EDE4;
 }
+
+body.dark { /* lightmode on */
+    background-color: #F0EDE4;
+    color: #004743;
+}
+/* /!\ body.dark collé => body s'il a la class dark VS body .dark = élément descendant dans body avec la class dark */
 
 #content {
     padding: 0 10px;
@@ -41,10 +46,12 @@ body {
 
 h1 {
     font-size: 1.5em;
+    font-family: "DM Serif Text", serif;
 }
 
 h2 {
     font-size: 1.3em;
+    font-family: "DM Serif Text", serif;
 }
 
 h3 {
@@ -74,6 +81,10 @@ header {
     align-items: center;
 }
 
+body.dark #toggle_lightmode { /* lightmode on */
+    filter: invert(0);
+}
+
 #name {
     position: absolute;
     left: 50%; /* coin gauche à 50% du parent */
@@ -83,6 +94,10 @@ header {
 #social_icons {
     display: flex;
     gap: 15px;
+}
+
+body.dark #social_icons { /* lightmode on */
+    filter: invert(1);
 }
 
 #header_container img {
@@ -107,11 +122,11 @@ header {
 
 .cta a {
     font-size: 1em;
-    color: white;
+    color: #F0EDE4;
     text-transform: uppercase;
     text-align: center;
 
-    border: 2px solid white;
+    border: 2px solid #F0EDE4;
     border-radius: 10px;
     padding: 10px;
 
@@ -123,10 +138,20 @@ header {
     max-width: 200px;
 }
 
-#download_cv_button, #contact_button { /* Mise en forme main CTA */
-    border: 2px solid black;
-    background-color: white;
-    color: black;
+body.dark .cta a { /* lightmode on */
+    color: #004743;
+    border: 2px solid #004743;
+}
+
+#download_cv_button { /* Mise en forme main CTA */
+    border: 2px solid #004743;
+    background-color: #F0EDE4;
+    color: #004743;
+}
+
+body.dark #download_cv_button, body.dark #contact_button { /* lightmode on */
+    background-color: #004743;
+    color: #F0EDE4;
 }
 
 /* ABOUT ME PART */
@@ -145,21 +170,27 @@ header {
     #about_me_part {
         gap: 70px;
     }
-    #aboutme_title {
+    #aboutme_toppart {
         margin-top: -170px;
     }
 }
 
-#aboutme_title {
+#aboutme_toppart {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
 }
 
-#aboutme_title h3 {
-    margin-left: -35px;
+#aboutme_title {
+    margin-left: -50px;
     margin-bottom: 15px;
+    color: #F0EDE4;
+}
+
+body.dark #aboutme_title { /* lightmode on */
+    color: #004643;
+    text-shadow: 1px 1px 1px #F0EDE4;
 }
 
 #aboutme_text {
@@ -167,6 +198,19 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 15px;
+}
+
+.highlight {
+    padding: 3px;
+    border-radius: 2px;
+    color: #004643;
+    background-color: #F0EDE4;
+}
+
+body.dark .highlight {
+    color: #F0EDE4;
+    background-color: #004643;
 }
 
 #about_me_part p {
@@ -176,7 +220,36 @@ header {
 #about_me_part img {
     height: 160px;
     border-radius: 10px 20px 10px 75px;
+    box-shadow: -10px 10px 0px #F0EDE4;
+    margin-left: 10px;
 }
+
+body.dark #about_me_part img { /* lightmode on */
+    box-shadow: -10px 10px 0px #004643;
+}
+
+.description_cta {
+    margin-top: 30px;
+}
+
+.description_cta a {
+    animation: gradientMove 3s infinite;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+
+    border-radius: 10px;
+    padding: 10px;
+
+    max-width: 40vw;
+    max-width: 200px;
+}
+
+@keyframes gradientMove {
+    0% { background-color: #004643; color: #F0EDE4; border: 2px solid #F0EDE4; }
+    50% { background-color: #F0EDE4; color: #004643; border: 2px solid #004643; }
+    100% { background-color: #004643; color: #F0EDE4; border: 2px solid #F0EDE4; }
+  }
 
 /* SKILLS */
 
@@ -221,10 +294,17 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: 2px solid white;
+    border: 2px solid #F0EDE4;
+    border-bottom: 0;
     width: 90vw;
     max-width: 400px;
     border-radius: 10px 10px 0 0;
+}
+
+body.dark #accordeon_radio_bloc { /* lightmode on */
+    border: 2px solid #004643;
+    border-bottom: 0;
+    background-color: #004643;
 }
 
 #accordeon_radio_bloc input[type="radio"] {
@@ -241,28 +321,40 @@ header {
     aspect-ratio: auto;
 }
 
+body.dark #accordeon_radio_bloc img { /* lightmode on */
+    filter: invert(1);
+}
+
 #accordeon_radio_bloc label {
     padding: 10px;
-    border-radius: 10px 10px 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: -1px;
+    border-radius: 10px 10px 0 0;
     transition: background-color 0.5s ease, filter 0.5s ease;
 }
 
 #accordeon_radio_bloc input[type="radio"]:checked + label {
-    background-color: white;
+    background-color: #F0EDE4;
     border-radius: 10px 10px 0 0;
+}
+
+body.dark #accordeon_radio_bloc input[type="radio"]:checked + label { /* lightmode on */
+    background-color: #F0EDE4;
+    margin-top: 1px;
 }
 
 #accordeon_radio_bloc input[type="radio"]:checked + label img {
     filter: invert(0);
 }
 
+body.dark #accordeon_radio_bloc input[type="radio"]:checked + label img { /* lightmode on */
+    filter: invert(0);
+}
+
 #skills_dynamic_display {
-    background-color: white;
-    color: black;
+    background-color: #F0EDE4;
+    color: #004643;
     width: 90vw;
     max-width: 400px;
     height: fit-content;
@@ -272,6 +364,11 @@ header {
     padding: 15px;
 
     margin-bottom: 30px;
+}
+
+body.dark #skills_dynamic_display { /* lightmode on */
+    border: 2px solid #004643;
+    border-top: 0;
 }
 
 #skills_dynamic_display h3 {
@@ -288,6 +385,13 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.card h4 {
+    color: #F0EDE4;
+    background-color: #004643;
+    padding: 3px;
+    border-radius: 2px;
 }
 
 .experiences_card p {
@@ -325,7 +429,7 @@ header {
     margin-bottom: 15px;
     border-radius: 15px;
     color: black;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(240,237,228,0.3);
     overflow: hidden; /* masque le débordement de l'image */
     z-index: 0;
   }
@@ -392,56 +496,55 @@ header {
     border-radius: 10px;
 }
 
-#cta_contact a {
+/* Animation sur la carte */
+.contact_card {
+    background-color: #004743;
+    border: 2px solid #F0EDE4;
+    color: #F0EDE4;
+  }
+  
+/* Animation directe "giggle" */
+@keyframes giggle {
+    0%, 100% { transform: rotate(0deg); }
+    10% { transform: rotate(3deg) scale(1.1); }
+    20% { transform: rotate(-3deg) scale(1.1); }
+    30% { transform: rotate(3deg) scale(1.1); }
+    40% { transform: rotate(-3deg) scale(1.1); }
+    50% { transform: rotate(0deg) scale(1) ;}
+    100% { transform: none; }
+  }
+  
+  /* Carte 1 */
+  .contact_card:nth-child(1) {
+    animation: giggle 2s infinite;
+  }
+  
+  /* Carte 2 */
+  .contact_card:nth-child(2) {
+    animation: giggle 2s infinite;
+    animation-delay: 1s;
+  }
+  
+
+  /* Lien texte */
+  #cta_contact a {
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 10px;
-}
-
-#cta_contact img {
+    color: #F0EDE4;
+  }
+  
+  /* Icône */
+  #cta_contact img {
     height: 40px;
     aspect-ratio: auto;
     filter: invert(1);
-}
+  }
 
-.contact_card {
-    background-color: black;
-    border: 2px solid white;
-    transition: transform 0.3s;
-    animation: pulseCard 6s infinite;
-    animation-timing-function: ease-in-out;
-}
-
-.contact_card a {
-    color: white;
-}
-
-.contact_card:nth-child(2) { /* uniquement pour le second bloc */
-    animation-delay: 3s;
-}
   
-@keyframes pulseCard {
-    0% {
-      transform: scale(1);
-      filter: invert(0);
-    }
-    25% {
-      transform: scale(1.1);
-      filter: invert(1);
-    }
-    50% {
-      transform: scale(1);
-      filter: invert(0);
-    }
-    100% {
-      transform: scale(1);
-      filter: invert(0);
-    }
-}
-
 /* FOOTER */
 
 footer {

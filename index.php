@@ -51,21 +51,20 @@
     <!-- Partie à propos de moi -->
     <div id="about_me_part">
 
-      <div id="aboutme_title">
-        <img src="https://fneto-prod.fr/portfolio/img/photo.png" alt="Photo Florian Neto">
-        <h3>On fait connaissance ?</h3>
+      <div id="aboutme_toppart">
+        <img src="https://fneto-prod.fr/portfolio/img/photo.png" alt="Photo Florian Neto" id="aboutme_photo">
+        <h3 id="aboutme_title">On fait connaissance ?</h3>
       </div>
 
       <div id="aboutme_text">
-        <p>Florian Neto, 29 ans ! 🤝</p>
         <p>Chef de projet digital de formation, j'ai commencé le code en 2020 en me formant en autonomie sur les langages front (HTML, CSS, JavaScript) puis back (PHP, SQL), 
         au travers de différents projets personnels.
         <p>Passionné par ce domaine, je souhaite passer un cap et en faire mon métier.</p>
-        <p><span class="bold">C'est là que vous intervenez 🫵</span></p>
+        <p><span class="bold highlight">C'est là que vous intervenez 🫵</span></p>
         <p>Comment ? En m'accueillant dans votre entreprise !</p>
         <p>Au travers d'une alternance 3 semaines entreprise, 1 semaine école, je peux enrichir vos équipes par <span class="bold">ma motivation, ma créativité et mon savoir-faire</span> grandissant.</p>
 
-        <div class="cta">
+        <div class="description_cta">
           <a href="#" id="contact_button" class="contact_button">Contactez-moi !</a>
         </div>
 

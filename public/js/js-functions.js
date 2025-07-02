@@ -243,4 +243,12 @@ function getProjectsContent() {
     projetsContainer.appendChild(container);
 }
 
+/* Fonctionnalité : toogle lightmode */
+
+const toggle = document.getElementById('toggle_lightmode');
+toggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+});
+
+
 
