@@ -50,7 +50,7 @@ if(contactButton) {
 // Fonctionnalité : Fonction qui affiche les compétences
 
 /* get le contenu du json */
-fetch('/public/js/json/skills.json')
+fetch('./public/js/json/skills.json')
   .then(response => response.json())
   .then(data => {
     accordeonContent = data;
@@ -189,7 +189,7 @@ function getAccordeonNewContent(radioAccordeon) {
 // Fonctionnalité : Fonction qui affiche les projets
 
 /* get le contenu du json */
-fetch('/public/js/json/projects.json')
+fetch('./public/js/json/projects.json')
   .then(response => response.json())
   .then(data => {
     projectsContent = data;

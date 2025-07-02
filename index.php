@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="./public/css/design-system.css/">
+  <link rel="stylesheet" href="./public/css/design-system.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
@@ -122,7 +122,7 @@
 
       <div id="cta_contact">
         <div class="contact_card">
-          <a href="https://wa.me/06.89.63.32.77"> <!-- check que fonctionnel, si non essayer sans les points ou avec extension territoire -->
+          <a href="https://wa.me/+33689633277">
             <img src="https://fneto-prod.fr/portfolio/img/phone_icon.png" alt="Icône téléphone">
             <p>Sur Whats'App</p>
           </a>
@@ -147,19 +147,19 @@
   <!-- Nav bar -->
   <nav>
 
-      <a href="/#about_me_part">
+      <a href="./#about_me_part">
         <img src="https://fneto-prod.fr/portfolio/img/profile_icon.jpg" alt="Navigation - Qui suis-je ?">
       </a>
 
-      <a href="/#my_projects_part">
+      <a href="./#my_projects_part">
         <img src="https://fneto-prod.fr/portfolio/img/project_icon.jpg" alt="Navigation - Projets personnels">
       </a>
 
-      <a href="/#contact_part">
+      <a href="./#contact_part">
         <img src="https://fneto-prod.fr/portfolio/img/contact_icon.png" alt="Navigation - Me contacter">
       </a>
 
-      <a href="/#header_container">
+      <a href="./#header_container">
         <img src="https://fneto-prod.fr/portfolio/img/arrow_icon.jpg" alt="Navigation - Revenir en haut" id="nav_arrow">
       </a>
 
