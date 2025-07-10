@@ -46,7 +46,7 @@
 
     <!-- Partie du haut -->
     <div id="top_part">
-      <h1>Florian Neto</h1>
+      <h1 class="underline">Florian Neto</h1>
       <h2>Développeur web en devenir.<br>En recherche d'alternance.</h2>
     </div>
 
@@ -60,14 +60,14 @@
 
       <div id="aboutme_toppart">
         <img src="https://fneto-prod.fr/portfolio/img/photo.png" alt="Photo Florian Neto" id="aboutme_photo">
-        <h3 id="aboutme_title">On fait connaissance ?</h3>
+        <h3 id="aboutme_title" class="underline">On fait connaissance ?</h3>
       </div>
 
       <div id="aboutme_text">
         <p>Chef de projet digital de formation, j'ai commencé le code en 2020 en me formant en autonomie sur les langages front (HTML, CSS, JavaScript) puis back (PHP, SQL), 
         au travers de différents projets personnels.
         <p>Passionné par ce domaine, je souhaite passer un cap et en faire mon métier.</p>
-        <p><span class="bold highlight">C'est là que vous intervenez 🫵</span></p>
+        <h3><span class="underline">C'est là que vous intervenez 🫵</span></h3>
         <p>Comment ? En m'accueillant dans votre entreprise !</p>
         <p>Au travers d'une alternance 3 semaines entreprise, 1 semaine école, je peux enrichir vos équipes par <span class="bold">ma motivation, ma créativité et mon savoir-faire</span> grandissant.</p>
 
@@ -84,7 +84,7 @@
 
       <!-- Accordéon des compétences et expériences -->
       <div id="accordeon_full_bloc">
-      <h3 class="title_category">Compétences et expériences</h3>
+      <h3 class="title_category underline">Compétences et expériences</h3>
         <div id="accordeon_radio_bloc">
 
           <div class="accordeon_icon">
@@ -123,7 +123,7 @@
 
       <!-- Projets personnels -->
       <div id="my_projects_part">
-        <h3 class="title_category">Projets personnels</h3>
+        <h3 class="title_category underline">Projets personnels</h3>
 
         <div id="projects_content"></div>
       
@@ -136,7 +136,7 @@
     <!-- Partie prise de contact -->
     <div id="contact_part">
       
-      <h3>On prend contact ? 💬</h3>
+      <h3 class="underline">On prend contact ? 💬</h3>
 
       <div id="cta_contact">
         <div class="contact_card">
@@ -178,7 +178,7 @@
 
       <a href="./#contact_part">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19.2 5H4.8C3.81 5 3.009 5.81 3.009 6.8L3 17.6C3 18.59 3.81 19.4 4.8 19.4H19.2C20.19 19.4 21 18.59 21 17.6V6.8C21 5.81 20.19 5 19.2 5ZM19.2 17.6H4.8V8.6L12 13.1L19.2 8.6V17.6ZM4.8 6.8L12 11.3L19.2 6.8H4.8Z"/>
+          <path d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4ZM5,6H19a1,1,0,0,1,1,1l-8,4.88L4,7A1,1,0,0,1,5,6ZM20,17a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V9.28l7.48,4.57a1,1,0,0,0,1,0L20,9.28Z"/>
         </svg>
       </a>
 

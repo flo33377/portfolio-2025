@@ -111,6 +111,9 @@ body.dark #social_icons { /* lightmode on */
 
 #top_part {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cta {
@@ -150,9 +153,26 @@ body.dark .cta a { /* lightmode on */
     color: #004743;
 }
 
-body.dark #download_cv_button, body.dark #contact_button { /* lightmode on */
+body.dark #download_cv_button { /* lightmode on */
     background-color: #004743;
     color: #F0EDE4;
+}
+
+.underline {
+    position: relative;
+    width: fit-content;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.1em;
+    width: 100%;
+    height: 0.3em;
+    background-color: #1DA3AF;
+    z-index: -1;
+    border-radius: 10px;
 }
 
 /* ABOUT ME PART */
@@ -164,12 +184,14 @@ body.dark #download_cv_button, body.dark #contact_button { /* lightmode on */
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 /* case desktop */
 @media screen and (min-width: 767px) {
     #about_me_part {
-        gap: 70px;
+        gap: 100px;
+        margin-bottom: 50px;
     }
     #aboutme_toppart {
         margin-top: -170px;
@@ -191,7 +213,7 @@ body.dark #download_cv_button, body.dark #contact_button { /* lightmode on */
 
 body.dark #aboutme_title { /* lightmode on */
     color: #004643;
-    text-shadow: 1px 1px 1px #F0EDE4;
+    text-shadow: 2px 1px 1px #F0EDE4;
 }
 
 #aboutme_text {
@@ -202,17 +224,17 @@ body.dark #aboutme_title { /* lightmode on */
     margin-top: 15px;
 }
 
+#aboutme_text h3 {
+    margin: 15px 0px;
+}
+
 .highlight {
     padding: 3px;
     border-radius: 2px;
-    color: #004643;
-    background-color: #F0EDE4;
+    color: #F0EDE4;
+    background-color: #1DA3AF;
 }
 
-body.dark .highlight {
-    color: #F0EDE4;
-    background-color: #004643;
-}
 
 #about_me_part p {
     margin-top: 10px;
@@ -223,6 +245,7 @@ body.dark .highlight {
     border-radius: 10px 20px 10px 75px;
     box-shadow: -10px 10px 0px #F0EDE4;
     margin-left: 10px;
+    z-index: -2;
 }
 
 body.dark #about_me_part img { /* lightmode on */
@@ -230,11 +253,10 @@ body.dark #about_me_part img { /* lightmode on */
 }
 
 .description_cta {
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .description_cta a {
-    animation: gradientMove 3s infinite;
     font-size: 1em;
     text-transform: uppercase;
     text-align: center;
@@ -246,11 +268,48 @@ body.dark #about_me_part img { /* lightmode on */
     max-width: 200px;
 }
 
-@keyframes gradientMove {
-    0% { background-color: #004643; color: #F0EDE4; border: 2px solid #F0EDE4; }
-    50% { background-color: #F0EDE4; color: #004643; border: 2px solid #004643; }
-    100% { background-color: #004643; color: #F0EDE4; border: 2px solid #F0EDE4; }
-  }
+#contact_button {
+    animation: pulseLight 2s infinite;
+    background-color: #F0EDE4;
+    color: #004643;
+}
+
+@keyframes pulseLight {
+    0% {
+        /* démarre box shadow existe mais pas visible (ne prend aucune place) */
+        box-shadow: 0 0 0 0 rgba(240, 237, 228, .3);
+    }
+    70% {
+        /* transition vers étendue à 30px mais quand à 30px => opacité à 0 */
+        box-shadow: 0 0 0 30px rgba(240, 237, 228, 0);
+    }
+      100% {
+        /* box shadow reset vers opacité 0 et ne prend aucune place */
+        box-shadow: 0 0 0 0 rgba(240, 237, 228, 0);
+    }
+}
+
+body.dark #contact_button { /* lightmode on */
+    animation: pulseDark 2s infinite;
+    background-color: #004643;
+    color: #F0EDE4;
+}
+
+@keyframes pulseDark {
+    0% {
+        /* démarre box shadow existe mais pas visible (ne prend aucune place) */
+        box-shadow: 0 0 0 0 rgba(0, 71, 67, .3);
+    }
+    70% {
+        /* transition vers étendue à 30px mais quand à 30px => opacité à 0 */
+        box-shadow: 0 0 0 30px rgba(0, 71, 67, 0);
+    }
+      100% {
+        /* box shadow reset vers opacité 0 et ne prend aucune place */
+        box-shadow: 0 0 0 0 rgba(0, 71, 67, 0);
+    }
+}
+
 
 /* SKILLS */
 
@@ -261,13 +320,15 @@ body.dark #about_me_part img { /* lightmode on */
     flex-wrap: wrap;
     justify-content: center;
     gap: 0;
+    margin-bottom: 30px;
 }
 
 /* case desktop */
 @media screen and (min-width: 767px) {
     #skills_projects_content {
-        gap: 30px;
-        justify-content: space-between;
+        gap: 70px;
+        justify-content: center;
+        margin-bottom: 50px;
     }
 }
 
@@ -279,16 +340,24 @@ body.dark #about_me_part img { /* lightmode on */
 #accordeon_full_bloc {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 90vw;
 }
 
 /* case desktop */
 @media screen and (min-width: 767px) {
     #accordeon_full_bloc {
-        max-width: 50%;
+        width: 35%;
     }
     #my_projects_part {
-        max-width: 50%;
+        width: 35%;
     }
+}
+
+#my_projects_part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #accordeon_radio_bloc {
@@ -297,8 +366,7 @@ body.dark #about_me_part img { /* lightmode on */
     justify-content: space-between;
     border: 2px solid #F0EDE4;
     border-bottom: 0;
-    width: 90vw;
-    max-width: 400px;
+    width: 100%;
     border-radius: 10px 10px 0 0;
 }
 
@@ -362,8 +430,7 @@ body.dark #accordeon_radio_bloc input[type="radio"]:checked + label { /* lightmo
 #skills_dynamic_display {
     background-color: #F0EDE4;
     color: #004643;
-    width: 90vw;
-    max-width: 400px;
+    width: 100%;
     height: fit-content;
     margin-top: -1px;
     border-radius: 0 0 10px 10px;
@@ -386,6 +453,10 @@ body.dark #skills_dynamic_display { /* lightmode on */
 .card, .experiences_card, .education_card {
     border-bottom: 1px solid rgba(0,0,0,0.3);
     padding: 5px 0;
+}
+
+.card:last-child, .experiences_card:last-child, .education_card:last-child {
+    border-bottom: 0;
 }
 
 .dev_card .card, .tools_card .card, .languages_card .card {
@@ -569,6 +640,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     gap: 10px;
     position: fixed;
     bottom: 15px;
@@ -587,6 +659,7 @@ nav svg {
 
 #nav_arrow {
     transform: rotate(270deg);
+    height: 35px;
 }
 
 
