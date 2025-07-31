@@ -20,6 +20,17 @@
   <title>Florian Neto - Portfolio</title>
 </head>
 
+<!-- tag analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQBVBZMKTF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZQBVBZMKTF');
+</script>
+
+
 <body>
 
   <header>
@@ -51,7 +62,7 @@
     </div>
 
     <div class="cta">
-      <a href="https://fneto-prod.fr/portfolio/document/CV-FlorianNeto.pdf" download id="download_cv_button">Télécharger mon CV</a>
+      <a href="https://fneto-prod.fr/portfolio/document/CV-FlorianNeto.pdf" download class="main_cta" id="download_cv_button">Télécharger mon CV</a>
       <a href="https://github.com/flo33377/portfolio-2025" id="go_github_button">Voir les coulisses de ce site</a>
     </div>
 
@@ -71,8 +82,9 @@
         <p>Comment ? En m'accueillant dans votre entreprise !</p>
         <p>Au travers d'une alternance 3 semaines entreprise, 1 semaine école, je peux enrichir vos équipes par <span class="bold">ma motivation, ma créativité et mon savoir-faire</span> grandissant.</p>
 
-        <div class="description_cta">
-          <a href="#" id="contact_button" class="contact_button">Contactez-moi !</a>
+        <div class="cta">
+          <a href="#" id="contact_button" class="main_cta contact_button">Contactez-moi !</a>
+          <a href="https://www.lereacteur.io/programs/Le_Reacteur_Alternance_Entreprise.pdf" target='_blank' class="secondary_cta">Programme de la formation</a>
         </div>
 
       </div>

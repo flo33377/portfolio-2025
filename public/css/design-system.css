@@ -140,6 +140,24 @@ body.dark #social_icons { /* lightmode on */
     justify-content: center;
     max-width: 40vw;
     max-width: 200px;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta a:hover {
+    background-color: #F0EDE4;
+    color: #004643;
+}
+
+.cta .main_cta {
+    background-color: #F0EDE4;
+    color: #004643;
+    border: 2px solid #004643;
+    transition: transform 0.3s ease;
+}
+
+.cta .main_cta:hover {
+    transform: scale(1.1);
 }
 
 body.dark .cta a { /* lightmode on */
@@ -147,13 +165,12 @@ body.dark .cta a { /* lightmode on */
     border: 2px solid #004743;
 }
 
-#download_cv_button { /* Mise en forme main CTA */
-    border: 2px solid #004743;
-    background-color: #F0EDE4;
-    color: #004743;
+body.dark .cta a:hover { /* lightmode on */
+    color: #F0EDE4;
+    background-color: #004643;
 }
 
-body.dark #download_cv_button { /* lightmode on */
+body.dark .cta .main_cta { /* lightmode on */
     background-color: #004743;
     color: #F0EDE4;
 }
@@ -224,6 +241,10 @@ body.dark #aboutme_title { /* lightmode on */
     margin-top: 15px;
 }
 
+#aboutme_text .cta {
+    margin-top: 30px;
+}
+
 #aboutme_text h3 {
     margin: 15px 0px;
 }
@@ -252,26 +273,8 @@ body.dark #about_me_part img { /* lightmode on */
     box-shadow: -10px 10px 0px #004643;
 }
 
-.description_cta {
-    margin-top: 50px;
-}
-
-.description_cta a {
-    font-size: 1em;
-    text-transform: uppercase;
-    text-align: center;
-
-    border-radius: 10px;
-    padding: 10px;
-
-    max-width: 40vw;
-    max-width: 200px;
-}
-
 #contact_button {
     animation: pulseLight 2s infinite;
-    background-color: #F0EDE4;
-    color: #004643;
 }
 
 @keyframes pulseLight {
@@ -281,7 +284,7 @@ body.dark #about_me_part img { /* lightmode on */
     }
     70% {
         /* transition vers étendue à 30px mais quand à 30px => opacité à 0 */
-        box-shadow: 0 0 0 30px rgba(240, 237, 228, 0);
+        box-shadow: 0 0 0 20px rgba(240, 237, 228, 0);
     }
       100% {
         /* box shadow reset vers opacité 0 et ne prend aucune place */
@@ -291,8 +294,6 @@ body.dark #about_me_part img { /* lightmode on */
 
 body.dark #contact_button { /* lightmode on */
     animation: pulseDark 2s infinite;
-    background-color: #004643;
-    color: #F0EDE4;
 }
 
 @keyframes pulseDark {
@@ -302,7 +303,7 @@ body.dark #contact_button { /* lightmode on */
     }
     70% {
         /* transition vers étendue à 30px mais quand à 30px => opacité à 0 */
-        box-shadow: 0 0 0 30px rgba(0, 71, 67, 0);
+        box-shadow: 0 0 0 20px rgba(0, 71, 67, 0);
     }
       100% {
         /* box shadow reset vers opacité 0 et ne prend aucune place */
@@ -365,6 +366,8 @@ body.dark #contact_button { /* lightmode on */
     flex-direction: row;
     justify-content: space-between;
     border: 2px solid #F0EDE4;
+    background-color: #004643;
+    /*background-color: #F0EDE4; test */
     border-bottom: 0;
     width: 100%;
     border-radius: 10px 10px 0 0;
@@ -382,6 +385,9 @@ body.dark #accordeon_radio_bloc { /* lightmode on */
 
 #accordeon_radio_bloc .accordeon_icon {
     width: 33%;
+    /* test ajout 
+    display: flex;
+    justify-content: center; */
 }
 
 #accordeon_radio_bloc img, #accordeon_radio_bloc svg {
@@ -390,29 +396,68 @@ body.dark #accordeon_radio_bloc { /* lightmode on */
 
 #accordeon_radio_bloc .non_stroke_icon {
     fill: #F0EDE4;
+    /*fill: #004643; test
+    width: 100%; test */
 }
+
+/* #accordeon_radio_bloc .stroke_icon { /* test ci-dessous
+    width: 100%;
+} */
 
 #accordeon_radio_bloc .stroke_icon path {
     stroke: #F0EDE4;
-}
-
-body.dark #accordeon_radio_bloc img { /* lightmode on */
-    filter: invert(1);
+    /* stroke: #004643; test */
 }
 
 #accordeon_radio_bloc label {
+    /* position: relative; /* obligatoire pour placer les before/after en position absolute */
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px 10px 0 0;
-    transition: background-color 0.5s ease, filter 0.5s ease;
+    /* background-color: #F0EDE4; /* test */
+    transition: background-color 0.5s ease/* , width 0.5s ease, border-radius 0.5s ease */; /* test pour width et border radius */
 }
 
 #accordeon_radio_bloc input[type="radio"]:checked + label {
     background-color: #F0EDE4;
     border-radius: 7px 7px 0 0;
+    /* background-color: #004643; /* test ci-dessous */
+    /* border-radius: 0 0 50% 50%;
+    margin-top: -10px;
+    width: 80%; */
+    z-index: 1;
 }
+
+/* #accordeon_radio_bloc input[type="radio"]:checked + label::before,
+#accordeon_radio_bloc input[type="radio"]:checked + label::after { /* test ci-dessous
+    content: '';
+    position: absolute;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    background-color: #F0EDE4;
+    border-radius: 50%;
+    z-index: 0;
+} */
+
+/* #accordeon_radio_bloc input[type="radio"]:checked + label::before { /* test ci-dessous
+    left: -10px;
+}
+
+#accordeon_radio_bloc input[type="radio"]:checked + label::after { /* test ci-dessous
+    right: -10px;
+} */
+
+/* #accordeon_radio_bloc input[type="radio"]:checked + label .non_stroke_icon,
+#accordeon_radio_bloc input[type="radio"]:checked + label .stroke_icon { /* test ci-dessous
+    background-color: #F0EDE4;
+    border-radius: 50%;
+    padding: 5px;
+    width: 85%;
+    height: 95%;
+} */
 
 body.dark #accordeon_radio_bloc input[type="radio"]:checked + label { /* lightmode on */
     background-color: #F0EDE4;
@@ -459,10 +504,27 @@ body.dark #skills_dynamic_display { /* lightmode on */
     border-bottom: 0;
 }
 
-.dev_card .card, .tools_card .card, .languages_card .card {
+.dev_card .card, .tools_card .card, .languages_card .card, .coming_card .card {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+}
+
+.coming_card {
+    background-color: #004643;
+    color: #F0EDE4;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.coming_card .card {
+    border-color: rgba(240, 237, 228, .3);
+}
+
+.coming_card h3 {
+    margin-bottom: 10px;
 }
 
 .card h4 {
@@ -470,6 +532,10 @@ body.dark #skills_dynamic_display { /* lightmode on */
     background-color: #004643;
     padding: 3px;
     border-radius: 2px;
+}
+
+.card p {
+    text-align: right;
 }
 
 .experiences_card p {

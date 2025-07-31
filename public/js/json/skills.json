@@ -64,6 +64,42 @@
         "nom": "Espagnol",
         "niveau": "Notions",
         "categorie": "Langue"
+        },
+
+        {
+        "nom": "Frontend",
+        "niveau": "TypeScript, React.js, Next.js",
+        "categorie": "Coming_skills"
+        },
+
+        {
+        "nom": "Backend",
+        "niveau": "Node.js, Express, NestJS, RESTful API, Strapi, Socket.io",
+        "categorie": "Coming_skills"
+        },
+
+        {
+        "nom": "Mobile & desktop",
+        "niveau": "React Native, Expo",
+        "categorie": "Coming_skills"
+        },
+
+        {
+        "nom": "Bases de données",
+        "niveau": "MongoDB, PostgreSQL, Prisma",
+        "categorie": "Coming_skills"
+        },
+
+        {
+        "nom": "Test & qualité",
+        "niveau": "Jest, TDD, Clean Code",
+        "categorie": "Coming_skills"
+        },
+
+        {
+        "nom": "DevOps & Outils",
+        "niveau": "Git/GitHub, CI/CD, Docker, Cloud",
+        "categorie": "Coming_skills"
         }
     ],
 

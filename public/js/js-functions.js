@@ -39,7 +39,7 @@ if(contactButton) {
         navigator.clipboard.writeText(email).then(() => {
             showToast("Votre messagerie semble indisponible. Adresse e-mail copiée dans le presse-papier !");
           }).catch(() => {
-            showToast("Impossible de copier l'adresse. Écrivez-nous à : " + email);
+            showToast("Impossible de copier l'adresse. Écrivez-moi à : " + email);
           });
 
         }, 800); // délai suffisant pour détecter une absence de réaction
@@ -92,7 +92,8 @@ function getAccordeonNewContent(radioAccordeon) {
             const groupedSkills = {
                 'Développement': [],
                 'Outils': [],
-                'Langues': []
+                'Langues': [],
+                'A venir (contenu formation)' : []
             };
         
             accordeonContent.skills.forEach(skill => {
@@ -105,6 +106,9 @@ function getAccordeonNewContent(radioAccordeon) {
                         break;
                     case 'langue':
                         groupedSkills['Langues'].push(skill);
+                        break;
+                    case 'coming_skills' :
+                        groupedSkills['A venir (contenu formation)'].push(skill);
                         break;
                 }
             });
@@ -122,6 +126,9 @@ function getAccordeonNewContent(radioAccordeon) {
                             break;
                         case('Langues'):
                             categoryContainer.className = 'languages_card';
+                            break;
+                        case('A venir (contenu formation)'):
+                            categoryContainer.className = 'coming_card';
                             break;
                     }
 
