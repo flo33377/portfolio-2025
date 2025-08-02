@@ -1,0 +1,14 @@
+# Ignorer le fichier SQLite spécifique
+db/db_portfolio.db
+
+# Par sécurité, ignorer tous les fichiers de type .db dans ce dossier
+db/*.db
+
+# Éviter d’inclure des fichiers temporaires ou sensibles
+*.log
+*.tmp
+*.bak
+
+# Ignorer les fichiers système inutiles
+.DS_Store
+Thumbs.db
