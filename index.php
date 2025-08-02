@@ -2,6 +2,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 
+<?php
+// dépendances
+include_once(__DIR__ . "/src/analytics_recorder.php");
+?>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,16 +24,6 @@
 
   <title>Florian Neto - Portfolio</title>
 </head>
-
-<!-- tag analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQBVBZMKTF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-ZQBVBZMKTF');
-</script>
 
 
 <body>
@@ -60,6 +55,13 @@
       <h1 class="underline">Florian Neto</h1>
       <h2>Développeur web en devenir.<br>En recherche d'alternance.</h2>
     </div>
+
+
+<?php
+/* echo '<pre>';
+print_r($_SESSION);
+echo '<pre>'; */
+?>
 
     <div class="cta">
       <a href="https://fneto-prod.fr/portfolio/document/CV-FlorianNeto.pdf" download class="main_cta" id="download_cv_button">Télécharger mon CV</a>
