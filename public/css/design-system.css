@@ -21,6 +21,7 @@ div {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: unset;
 }
 
 body {
@@ -746,11 +747,83 @@ nav svg {
     z-index: 9999;
     pointer-events: none;
     font-family: sans-serif;
-  }
+}
   
-  .toast.show {
+.toast.show {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
-  }
+}
   
 
+/* PARTIE ANALYTICS */
+
+#authentification_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+@media screen and (max-width: 767px) {
+    #authentification_content {
+        flex-direction: column;
+        max-width: 90vw;
+    }
+}
+
+#authentification_form_bloc {
+    padding: 10px;
+    background-color: #F0EDE4;
+    border-radius: 10px;
+    color: #004643;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.dark #authentification_form_bloc {
+    background-color: #004643;
+    color: #F0EDE4;
+}
+
+#authentification_form_bloc h3, #demo_link_bloc h3 {
+    max-width: 80%;
+    text-align: center;
+}
+
+#authentification_content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    margin: 20px 0px;
+}
+
+#demo_link_bloc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta input[type='submit'] {
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+
+    border: 2px solid #004643;
+    border-radius: 10px;
+    padding: 10px;
+
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    max-width: 40vw;
+    max-width: 200px;
+}
+
+body.dark #submit_button {
+    background-color: #F0EDE4;
+    color: #004643;
+}

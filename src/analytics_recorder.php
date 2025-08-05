@@ -2,19 +2,23 @@
 
 /* Fichier qui contient le mécanisme de déclenchement des enregistrements de données analytics */
 
+    // ENVIRONNEMENT //
+
 // session
 session_start();
 
 // debug system
-ini_set('display_errors', '1');
+/* ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
+error_reporting(E_ALL); */
 
 // dépendances
 include_once(__DIR__ . "/analytics_functions.php");
+// base_url = lien vers la HP basé sur le serveur utilisé 
+define("BASE_URL", ($_SERVER["SERVER_PORT"] === "5000") ? "http://localhost:5000/" : "https://www.fneto-prod.fr/portfolio/");
 
 
-// SECURITE
+    // SECURITE //
 
 /* Système de blocage en cas d'intervalles de requêtes trop rapides */
 
@@ -50,7 +54,7 @@ if (isset($_SERVER['HTTP_ORIGIN'])) {
 }
 
 
-// MECANISME
+    // MECANISME //
 
 /* Récupère la date actuelle */
 $currentDate = (new DateTime())->format('Y-m-d');
