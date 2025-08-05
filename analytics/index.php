@@ -17,7 +17,7 @@ include_once(__DIR__ . "/src/analytics_system.php");
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
 
-  <script src="./../public/js/js-functions.js" defer></script>
+  <script src="./../public/js/analytics-js-functions.js" defer></script>
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://fneto-prod.fr/portfolio/img/photo.png">
   <link rel="icon" type="image/png" sizes="32x32" href="https://fneto-prod.fr/portfolio/img/photo.png">
@@ -80,6 +80,8 @@ echo '<pre>'; */
   </div>
 
   <?php else : ?>
+
+    <?php include_once(__DIR__ . "/src/content/analytics_interface.php"); ?>
 
   <?php endif ?>
 

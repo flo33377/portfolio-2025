@@ -13,7 +13,7 @@ ini_set('display_startup_errors', '1');
 error_reporting(E_ALL); */
 
 // dépendances
-include_once(__DIR__ . "/analytics_functions.php");
+include_once(__DIR__ . "/analytics_recorder_functions.php");
 // base_url = lien vers la HP basé sur le serveur utilisé 
 define("BASE_URL", ($_SERVER["SERVER_PORT"] === "5000") ? "http://localhost:5000/" : "https://www.fneto-prod.fr/portfolio/");
 
