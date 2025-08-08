@@ -90,7 +90,6 @@ if(!$isCurrentDateRecorded){
     $impressions = $previousStats['impressions'] + 1;
     $uniqueVisitors = $previousStats['unique_visitors'];
     if($newVisitor) {
-        echo 'New visitor';
         $uniqueVisitors++; // si new visiteur, incrémente nbr visiteurs
     };
     updateDB($currentDate, $impressions, $uniqueVisitors);

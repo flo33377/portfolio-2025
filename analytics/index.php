@@ -57,7 +57,8 @@ print_r($_SESSION);
 echo '<pre>'; */
 ?>
 
-<?php if(!isset($_SESSION['admin_access_granted']) || $_SESSION['admin_access_granted'] !== true) : ?>
+<?php if((!isset($_SESSION['admin_access_granted']) || $_SESSION['admin_access_granted'] !== true) 
+&& ($notification_message != "demo" && $notification_message != "granted")) : ?>
   <div id="authentification_content">
     <div id="authentification_form_bloc">
       <h3>Pour accéder à l'interface de suivi, authentifiez-vous :</h2>

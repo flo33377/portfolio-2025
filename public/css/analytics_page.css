@@ -1,7 +1,27 @@
+
+header {
+    margin-bottom: 10vh;
+}
+
+/* Case mobile */
+@media screen and (max-width: 767px) {
+    header {
+        margin-bottom: 5vh;
+    }
+}
+
 footer {
     margin-top: 40px;
     margin-bottom: 10px;
 }
 
-
+.warning_message {
+    text-align: center;
+    background-color: orangered;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    max-width: 90%;
+}
 

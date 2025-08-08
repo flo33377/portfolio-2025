@@ -170,6 +170,14 @@ echo '<pre>'; */
 
     </div>
 
+    <div id="info_part">
+      <div class="info_box">
+        <h3>Souriez, votre visite est enregistrée ✅</h3>
+        <p>Pour mieux comprendre le trafic de ce site, les visites sont comptabilisées de manière anonymisée.</p>
+      </div>
+      <div class="cta"><a href='<?= BASE_URL ?>analytics/'>Jetez un coup d'oeil au dashboard</a></div>
+    </div>
+
     <footer>
       <p>© Copyright 2025 - Florian Neto. Tous droits réservés.</p>
     </footer>

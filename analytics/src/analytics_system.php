@@ -42,12 +42,15 @@ if(isset($_POST['password_proposition']) && !empty($_POST['password'])) {
 
 /* Accès à l'interface démo */
 if(isset($_GET['mode']) && $_GET['mode'] == "demo") {
-    $notification_message = "test --> mettre include des données démo";
+    $notification_message = "demo";
 }
 
 /* Case access granted */
 // get all datas
-$datas = getAllDatas();
+if(isset($_SESSION['admin_access_granted']) && $_SESSION['admin_access_granted'] == true) {
+    $notification_message = "granted";
+    $datas = getAllDatas();
+};
 
 
 ?>
