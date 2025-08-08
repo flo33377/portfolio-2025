@@ -985,6 +985,12 @@ input[type="password"] {
     color: #F0EDE4;
 }
 
+.summary_info details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .summary_info {
     margin-top: 20px;
 }
@@ -992,9 +998,16 @@ input[type="password"] {
 .summary_info ul {
     font-size: 13px;
     text-align: justify;
+    max-width: 450px;
+}
+
+/* Case mobile */
+@media screen and (max-width: 767px) {
+    .summary_info ul {
+        max-width: 270px;
+    }
 }
 
 .summary_info li {
     margin-top: 10px;
 }
-
