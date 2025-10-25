@@ -27,9 +27,11 @@ a {
 body {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   background-color: #004743;
   color: #F0EDE4;
+  min-height: 100vh;
 }
 
 body.dark { /* lightmode on */
@@ -235,10 +237,11 @@ body.dark #aboutme_title { /* lightmode on */
 }
 
 #aboutme_text {
-    max-width: 400px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px;
     margin-top: 15px;
 }
 
@@ -505,7 +508,7 @@ body.dark #skills_dynamic_display { /* lightmode on */
     border-bottom: 0;
 }
 
-.dev_card .card, .tools_card .card, .languages_card .card, .coming_card .card {
+.dev_card .card, .tools_card .card, .languages_card .card, .organization_card .card {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

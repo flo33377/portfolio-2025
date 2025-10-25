@@ -53,7 +53,7 @@ include_once(__DIR__ . "/src/analytics_recorder.php");
     <!-- Partie du haut -->
     <div id="top_part">
       <h1 class="underline">Florian Neto</h1>
-      <h2>Développeur web en devenir.<br>En recherche d'alternance.</h2>
+      <h2>Chef de projet digital et marketing.<br>En recherche de CDI.<br>Disponible pour des missions freelance.</h2>
     </div>
 
 
@@ -64,8 +64,8 @@ echo '<pre>'; */
 ?>
 
     <div class="cta">
-      <a href="https://fneto-prod.fr/portfolio/document/CV-FlorianNeto.pdf" download class="main_cta" id="download_cv_button">Télécharger mon CV</a>
-      <a href="https://github.com/flo33377/portfolio-2025" id="go_github_button">Voir les coulisses de ce site</a>
+      <a href="https://fneto-prod.fr/portfolio/document/CV-FlorianNeto.pdf" target="_blank" download class="main_cta" id="download_cv_button">Télécharger mon CV</a>
+      <a href="https://github.com/flo33377/portfolio-2025" target="_blank" id="go_github_button">Voir les coulisses de ce site</a>
     </div>
 
     <!-- Partie à propos de moi -->
@@ -77,12 +77,10 @@ echo '<pre>'; */
       </div>
 
       <div id="aboutme_text">
-        <p>Chef de projet digital de formation, j'ai commencé le code en 2020 en me formant en autonomie sur les langages front (HTML, CSS, JavaScript) puis back (PHP, SQL), 
-        au travers de différents projets personnels.
-        <p>Passionné par ce domaine, je souhaite passer un cap et en faire mon métier.</p>
-        <h3><span class="underline">C'est là que vous intervenez 🫵</span></h3>
-        <p>Comment ? En m'accueillant dans votre entreprise !</p>
-        <p>Au travers d'une alternance 3 semaines entreprise, 1 semaine école, je peux enrichir vos équipes par <span class="bold">ma motivation, ma créativité et mon savoir-faire</span> grandissant.</p>
+        <p>Fort d'une appétence pour le digital et le marketing, j'ai notamment travaillé dans <span class="bold">plusieurs agences en tant que chef de projet digital</span>, 
+        fondé une association artistique dont je reste aujourd'hui le <span class="bold">responsable digital</span> et travaillé sur différentes <span class="bold">missions annexes</span> (création de site web, optimisation SEO, découpage de roadmap, conseil UX/UI, etc.).</p>
+        <p>Passionné de <span class="bold">développement web</span>, je me suis formé en autonomie sur différents langages (HTML, CSS, Javascript, PHP, SQL) via différents projets, notamment ce portfolio.</p>
+        <p>Je cherche désormais un <span class="bold">CDI</span> sur un poste permettant de mettre à profit mes <span class="bold">compétences transverses</span>, ainsi que ma créativité, mon sens de l'écoute et mon organisation.</p>
 
         <div class="cta">
           <a href="#" id="contact_button" class="main_cta contact_button">Contactez-moi !</a>

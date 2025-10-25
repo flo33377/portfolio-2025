@@ -90,10 +90,10 @@ function getAccordeonNewContent(radioAccordeon) {
         case 'pratical_skills': {
             // 1. Organise les compétences par catégorie
             const groupedSkills = {
+                'Gestion de projet': [],
+                'Méthode': [],
                 'Développement': [],
-                'Outils': [],
-                'Langues': [],
-                'A venir (contenu formation)' : []
+                'Langues': []
             };
         
             accordeonContent.skills.forEach(skill => {
@@ -101,14 +101,14 @@ function getAccordeonNewContent(radioAccordeon) {
                     case 'dev':
                         groupedSkills['Développement'].push(skill); // si dans la catégorie, le copie dans le tableau
                         break;
+                    case 'méthode':
+                        groupedSkills['Méthode'].push(skill);
+                        break;
                     case 'outil':
-                        groupedSkills['Outils'].push(skill);
+                        groupedSkills['Gestion de projet'].push(skill);
                         break;
                     case 'langue':
                         groupedSkills['Langues'].push(skill);
-                        break;
-                    case 'coming_skills' :
-                        groupedSkills['A venir (contenu formation)'].push(skill);
                         break;
                 }
             });
@@ -121,14 +121,14 @@ function getAccordeonNewContent(radioAccordeon) {
                         case('Développement'):
                             categoryContainer.className = 'dev_card';
                             break;
-                        case('Outils'):
+                        case('Méthode'):
+                            categoryContainer.className = 'organization_card';
+                            break;
+                        case('Gestion de projet'):
                             categoryContainer.className = 'tools_card';
                             break;
                         case('Langues'):
                             categoryContainer.className = 'languages_card';
-                            break;
-                        case('A venir (contenu formation)'):
-                            categoryContainer.className = 'coming_card';
                             break;
                     }
 
@@ -174,11 +174,19 @@ function getAccordeonNewContent(radioAccordeon) {
             accordeonContent.experiences.forEach(experience => {
                 const div = document.createElement('div');
                 div.className = "experiences_card";
-                div.innerHTML = `
-                    <h3>${experience.poste} chez ${experience.entreprise}</h3>
-                    <p>${experience.date}</p>
-                    <p>${experience.missions}</p>
-                    `;
+                if(experience.poste != "Freelance") {
+                    div.innerHTML = `
+                        <h3>${experience.poste} chez ${experience.entreprise}</h3>
+                        <p>${experience.date}</p>
+                        <p>${experience.missions}</p>
+                        `;
+                } else {
+                    div.innerHTML = `
+                        <h3>${experience.poste}</h3>
+                        <p>${experience.date}</p>
+                        <p>${experience.missions}</p>
+                        `;
+                }
                 container.appendChild(div);
             });
             dynamicContainer.appendChild(container);
@@ -219,8 +227,8 @@ function getProjectsContent() {
                     <div class="project_top">
                         <h3>${project.nom}</h3>
                         <div class="project_icon">
-                            <a href="${project.url_online}"><img src="https://fneto-prod.fr/portfolio/img/external-link-icon.png"></a>
-                            <a href="${project.url_github}"><img src="https://fneto-prod.fr/portfolio/img/github_icon.png"></a>
+                            <a href="${project.url_online}" target="_blank"><img src="https://fneto-prod.fr/portfolio/img/external-link-icon.png"></a>
+                            <a href="${project.url_github}" target="_blank"><img src="https://fneto-prod.fr/portfolio/img/github_icon.png"></a>
                         </div>
                     </div>
                 <p>${project.description}</p>

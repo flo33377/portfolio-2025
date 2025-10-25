@@ -22,7 +22,7 @@ define("BASE_URL", ($_SERVER["SERVER_PORT"] === "5000") ? "http://localhost:5000
 
 /* Système de blocage en cas d'intervalles de requêtes trop rapides */
 
-$rateLimitInSeconds = 10; //nbr de sec mini entre chaque requête pour ne pas être bloqué
+$rateLimitInSeconds = 3; //nbr de sec mini entre chaque requête pour ne pas être bloqué
 
 $clientIP = $_SERVER['REMOTE_ADDR'];
 $currentTime = time();

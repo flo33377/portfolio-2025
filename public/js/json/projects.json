@@ -1,11 +1,20 @@
 [
     {
+      "nom": "Tag Game",
+      "url_logo": "https://fneto-prod.fr/tag-game/public/img/tag-game-logo.png",
+      "date": "Août à Septembre 2025 (terminé)",
+      "url_online": "https://fneto-prod.fr/tag-game/",
+      "url_github": "https://github.com/flo33377/tag-game",
+      "description": "Jeu de société, basé sur un système de génération d'actions aléatoires, avec fonctionnalité de recherche, de proposition d'ajout d'actions et d'une interface de management et de modération des actions en ligne.",
+      "langages": "HTML, CSS, JS, PHP, stockage de données en JSON"
+    },
+    {
       "nom": "Portfolio (+ analytics)",
       "url_logo": "https://fneto-prod.fr/portfolio/img/photo.png",
       "date": "Juillet 2025 (terminé)",
       "url_online": "https://fneto-prod.fr/portfolio/",
       "url_github": "https://github.com/flo33377/portfolio-2025",
-      "description": "Portfolio créé dans le cadre de ma recherche d'alternance pour la formation Le Réacteur. Mise en place d'un système d'analytics des visites et de son dashboard.",
+      "description": "Portfolio créé dans le cadre de ma recherche d'emploi. Mise en place d'un système d'analytics des visites et de son dashboard.",
       "langages": "HTML, CSS, JS, PHP, SQL, BDD SQLite"
     },
     {
