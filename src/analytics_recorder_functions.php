@@ -35,7 +35,15 @@ function addCurrentDateInDB(string $currentDate) { //Ajoute la date courante en 
     $Statement->execute([
         'date_recorded' => $currentDate,
         'impressions' => 1,
-        'unique_visitors' => 1
+        'unique_visitors' => 1,
+        'desktop' => 0,
+        'tablet' => 0,
+        'mobile' => 0,
+        'chrome' => 0,
+        'firefox' => 0,
+        'safari' => 0,
+        'edge' => 0,
+        'other_browser' => 0
     ]);
 }
 

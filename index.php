@@ -17,6 +17,7 @@ include_once(__DIR__ . "/src/analytics_recorder.php");
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
 
   <script src="./public/js/js-functions.js" defer></script>
+  <script src="./public/js/device_browser_recorder.js" defer></script>
 
   <link rel="apple-touch-icon" sizes="180x180" href="https://fneto-prod.fr/portfolio/img/photo.png">
   <link rel="icon" type="image/png" sizes="32x32" href="https://fneto-prod.fr/portfolio/img/photo.png">
