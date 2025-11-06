@@ -85,7 +85,6 @@ echo '<pre>'; */
 
         <div class="cta">
           <a href="#" id="contact_button" class="main_cta contact_button">Contactez-moi !</a>
-          <a href="https://www.lereacteur.io/programs/Le_Reacteur_Alternance_Entreprise.pdf" target='_blank' class="secondary_cta">Programme de la formation</a>
         </div>
 
       </div>
